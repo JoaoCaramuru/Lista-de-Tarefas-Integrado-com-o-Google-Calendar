@@ -1,0 +1,236 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+
+#bg-video {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(8, 15, 30, 0.45);
+    z-index: -1;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
+
+header {
+    display: flex;
+    flex-flow: row wrap;
+    width: 70%;
+    margin: 20px auto;
+    gap: 10px;
+    align-items: center;
+}
+
+input,
+textarea {
+    font-size: larger;
+}
+
+input {
+    min-height: 5vh;
+    padding-left: 5%;
+}
+
+#input {
+    flex: 1 1 420px;
+    min-width: 0;
+}
+
+label {
+    color: aliceblue;
+}
+
+#btnadd {
+    min-width: 140px;
+    min-height: 5vh;
+    border: none;
+    background-color: green;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 0 18px;
+}
+
+#data,
+#inicio,
+#fim {
+    border-radius: 12px;
+    padding: 10px 12px;
+    min-width: 140px;
+}
+
+main {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 70%;
+    margin: 20px auto 40px;
+    gap: 12px;
+}
+
+.tarefa-nome {
+    flex: 1 1 220px;
+    text-align: left;
+}
+
+.tarefa-data,
+.tarefa-horario,
+.tarefa-calendar {
+    min-width: 150px;
+    color: #222;
+}
+
+.tarefa-botao {
+    margin-left: auto;
+    width: 140px;
+    height: 44px;
+}
+
+.tarefa {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.18);
+    margin-bottom: 10px;
+    min-height: 72px;
+    padding: 14px 16px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.tarefa-botao button {
+    background-color: rgb(222, 0, 0);
+    border: none;
+    color: white;
+    height: 100%;
+    transition: 0.3s;
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.tarefa-botao button:hover {
+    background-color: red;
+}
+
+#lote-tarefas {
+    margin: 24px auto;
+    background-image: linear-gradient(225deg, #1f93ff97, #1f23ff9f, #8b1fff9c);
+    max-width: 70vw;
+    border: none;
+    border-radius: 16px;
+    padding: 18px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#lote-tarefas h2,
+#lote-tarefas h3 {
+    color: aliceblue;
+}
+
+#tarefas-lote {
+    width: 100%;
+    max-width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: none;
+    resize: vertical;
+}
+
+#controletempo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+}
+
+#botaocalendario {
+    display: block;
+    margin: 20px auto;
+    padding: 14px 24px;
+    min-width: 260px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #4285F4, #34A853);
+    transition: 0.3s;
+}
+
+#botaocalendario:hover {
+    transform: scale(1.05);
+}
+
+.botaovarias {
+    border: none;
+    border-radius: 10px;
+    padding: 12px 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#usuario {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 20px;
+}
+
+.usuario-box {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: rgba(255, 255, 255, 0.16);
+    padding: 14px 18px;
+    border-radius: 16px;
+    backdrop-filter: blur(8px);
+    color: white;
+}
+
+.usuario-box img {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.usuario-info p {
+    margin: 2px 0;
+}
+
+@media (max-width: 900px) {
+    header,
+    main,
+    #lote-tarefas {
+        width: 92%;
+        max-width: 92%;
+    }
+
+    .tarefa-botao {
+        width: 100%;
+        margin-left: 0;
+    }
+}
